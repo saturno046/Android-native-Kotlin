@@ -24,7 +24,6 @@ class SliderFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
 
         fragment_title.text = pageTitle
-        btnEntra.visibility = View.INVISIBLE
 
     }
 

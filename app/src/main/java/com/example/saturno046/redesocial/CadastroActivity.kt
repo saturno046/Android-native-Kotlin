@@ -5,8 +5,6 @@ import android.support.v7.app.AppCompatActivity
 import com.example.saturno046.redesocial.R.layout.activity_cadastro
 
 
-
-
 class CadastroActivity : AppCompatActivity() {
 
 
