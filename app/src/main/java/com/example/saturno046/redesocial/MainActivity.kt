@@ -22,10 +22,16 @@ class MainActivity : AppCompatActivity() {
     val fragment3 = SliderFragment()
     lateinit var adpter : myPagerAdapter
     lateinit var activity : Activity
+    var btnClass = SliderFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        button2.setOnClickListener(){
+            val intentCadastroActivity = Intent(this, CadastroActivity::class.java)
+            startActivity(intentCadastroActivity)
+        }
 
         activity = this
 
@@ -41,10 +47,7 @@ class MainActivity : AppCompatActivity() {
 
         view_pager.adapter = adpter
 
-      //  var btnent: Button
-      //  bent = findViewById(R.id.btnEntra) as Button
 
-      //  btnent = findViewById(R.id.btnEntra) as Button
 
         view_pager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener{
 
@@ -54,6 +57,7 @@ class MainActivity : AppCompatActivity() {
 
             override fun onPageScrolled(p0: Int, p1: Float, p2: Int) {
 
+
             }
 
             override fun onPageSelected(p0: Int) {
@@ -61,7 +65,8 @@ class MainActivity : AppCompatActivity() {
                if (p0 == adpter.list.size-1){
                    //lastpage
                   // btn_next.text = "Done"
-               //    btnent.visibility = View.INVISIBLE
+
+
 
                }else{
               //     btnent.visibility = View.INVISIBLE
@@ -93,7 +98,7 @@ class MainActivity : AppCompatActivity() {
                         indicador1.setTextColor(Color.GRAY)
                         indicador2.setTextColor(Color.GRAY)
                         indicador3.setTextColor(Color.BLACK)
-
+                        button2.visibility = View.VISIBLE
                     }
                 }
             }

@@ -1,10 +1,10 @@
 package com.example.saturno046.redesocial
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.example.saturno046.redesocial.R
-import kotlinx.android.synthetic.main.activity_cadastro.*
+import android.support.v7.app.AppCompatActivity
+import com.example.saturno046.redesocial.R.layout.activity_cadastro
+
+
 
 
 class CadastroActivity : AppCompatActivity() {
@@ -12,6 +12,6 @@ class CadastroActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_cadastro)
+        setContentView(activity_cadastro)
 
 }}
