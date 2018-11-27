@@ -10,10 +10,7 @@ import android.support.v4.app.FragmentPagerAdapter
 import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.Button
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_slider.*
-import kotlinx.android.synthetic.main.fragment_slider.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,7 +19,6 @@ class MainActivity : AppCompatActivity() {
     val fragment3 = SliderFragment()
     lateinit var adpter : myPagerAdapter
     lateinit var activity : Activity
-    var btnClass = SliderFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,8 +43,6 @@ class MainActivity : AppCompatActivity() {
 
         view_pager.adapter = adpter
 
-
-
         view_pager.addOnPageChangeListener(object : ViewPager.OnPageChangeListener{
 
             override fun onPageScrollStateChanged(p0: Int) {
@@ -62,36 +56,20 @@ class MainActivity : AppCompatActivity() {
 
             override fun onPageSelected(p0: Int) {
 
-               if (p0 == adpter.list.size-1){
-                   //lastpage
-                  // btn_next.text = "Done"
-
-
-
-               }else{
-              //     btnent.visibility = View.INVISIBLE
-                   //has next page
-             //      btn_next.text = "next"
-             //      btn_next.setOnClickListener {
-             //          view_pager.currentItem++
-             //      }
-             //      btn_skip.setOnClickListener {
-             //          view_pager.currentItem--
-             //      }
-               }
-
 
                 when(view_pager.currentItem){
                     0 ->{
                         indicador1.setTextColor(Color.BLACK)
                         indicador2.setTextColor(Color.GRAY)
                         indicador3.setTextColor(Color.GRAY)
+                        button2.visibility = View.INVISIBLE
 
                     }
                     1 ->{
                         indicador1.setTextColor(Color.GRAY)
                         indicador2.setTextColor(Color.BLACK)
                         indicador3.setTextColor(Color.GRAY)
+                        button2.visibility = View.INVISIBLE
 
                     }
                     2 ->{
