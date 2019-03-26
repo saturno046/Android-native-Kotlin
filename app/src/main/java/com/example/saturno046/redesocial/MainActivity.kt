@@ -11,22 +11,26 @@ import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_slider.*
 
 class MainActivity : AppCompatActivity() {
 
     val fragment1 = SliderFragment()
     val fragment2 = SliderFragment()
     val fragment3 = SliderFragment()
+
     lateinit var adpter : myPagerAdapter
     lateinit var activity : Activity
+
+    var sliderf = SliderFragment()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        button2.setOnClickListener(){
-            val intentCadastroActivity = Intent(this, CadastroActivity::class.java)
-            startActivity(intentCadastroActivity)
+        btnEntra.setOnClickListener(){
+            val intentLogin = Intent(this, LoginActivity::class.java)
+            startActivity(intentLogin)
         }
 
         activity = this
@@ -62,21 +66,22 @@ class MainActivity : AppCompatActivity() {
                         indicador1.setTextColor(Color.BLACK)
                         indicador2.setTextColor(Color.GRAY)
                         indicador3.setTextColor(Color.GRAY)
-                        button2.visibility = View.INVISIBLE
+                        btnEntra.visibility = View.INVISIBLE
 
                     }
                     1 ->{
                         indicador1.setTextColor(Color.GRAY)
                         indicador2.setTextColor(Color.BLACK)
                         indicador3.setTextColor(Color.GRAY)
-                        button2.visibility = View.INVISIBLE
+                        btnEntra.visibility = View.INVISIBLE
 
                     }
                     2 ->{
                         indicador1.setTextColor(Color.GRAY)
                         indicador2.setTextColor(Color.GRAY)
                         indicador3.setTextColor(Color.BLACK)
-                        button2.visibility = View.VISIBLE
+                        btnEntra.visibility = View.VISIBLE
+
                     }
                 }
             }
@@ -85,9 +90,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-
     class myPagerAdapter(manager : FragmentManager) : FragmentPagerAdapter(manager){
-
 
         val list : MutableList<Fragment> = ArrayList()
 

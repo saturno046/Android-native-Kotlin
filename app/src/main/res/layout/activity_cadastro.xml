@@ -7,158 +7,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/holo_red_light"
     tools:context=".CadastroActivity"
     tools:layout_editor_absoluteY="25dp">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="34dp"
-        android:layout_marginTop="8dp"
-        android:text="IesbMobile"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/textView2"
+    <EditText
+        android:id="@+id/txtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="230dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="61dp"
-        android:text="Bem vindo, faca seu cadastro."
-        android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/editText2"
+        android:layout_marginStart="99dp"
+        android:layout_marginTop="243dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="80dp"
+        android:autoText="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nome"
+        app:layout_constraintBottom_toTopOf="@+id/txtAddress"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="144dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginStart="48dp"
-        android:backgroundTint="@android:color/holo_red_dark"
+        android:id="@+id/txtAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="53dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Cidade"
-        android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editText14"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <EditText
-        android:id="@+id/editText14"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="48dp"
-        android:backgroundTint="@android:color/holo_red_dark"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Estado"
-        android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toBottomOf="@+id/editText2"
+        android:text="address"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastra"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText2"
-        app:layout_constraintTop_toTopOf="@+id/editText2" />
-
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="98dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginStart="45dp"
-        android:backgroundTint="@android:color/holo_red_dark"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Nova senha"
-        android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText7" />
-
-    <EditText
-        android:id="@+id/editText10"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="14dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginStart="45dp"
-        android:backgroundTint="@android:color/holo_red_dark"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toTopOf="@+id/editText7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <EditText
-        android:id="@+id/editText7"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="26dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginStart="45dp"
-        android:backgroundTint="@android:color/holo_red_dark"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="Email@email.com"
-        android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toTopOf="@+id/editText4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText10" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="217dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:background="@android:color/background_light"
-        android:text="ENTRAR"
-        android:textColor="@android:color/holo_red_dark"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
-
-    <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/btnCadastra"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:text="ENTRE AGORA"
-        android:textColor="@android:color/background_dark"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="26dp"
-        android:layout_marginEnd="7dp"
-        android:text="Ja e Aluno?"
-        android:textColor="@android:color/background_light"
-        android:textSize="18sp"
+        android:layout_marginStart="157dp"
+        android:layout_marginEnd="157dp"
+        android:layout_marginBottom="266dp"
+        android:text="Cadastro"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView3"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

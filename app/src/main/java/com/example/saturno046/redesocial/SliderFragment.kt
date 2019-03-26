@@ -29,5 +29,4 @@ class SliderFragment : Fragment() {
         pageTitle = title
     }
 
-
 }
